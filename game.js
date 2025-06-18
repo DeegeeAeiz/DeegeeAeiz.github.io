@@ -153,7 +153,7 @@ function draw() {
 }
 
 function startGame() {
-  interval = setInterval(draw, 1);
+  interval = setInterval(draw, 100);
 }
 
 document.addEventListener("keydown", keyDownHandler, false);
