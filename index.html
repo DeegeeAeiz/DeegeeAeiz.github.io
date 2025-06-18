@@ -10,35 +10,25 @@
 </head>
 
 <body>
-    <header>
-        <div class="header-container">
-            JSONplaceholder Visualizer
-        </div>
-    </header>
-    <main>
-        <div class="app-container">
-            <div class="button-container">
-                <button onclick="GeneratePlaceholder()" class="JSONbutton">Generate!</button>
-            </div>
-            <div class="output-container" id="title-container">
-                <p class="p-label">
-                    Title
-                </p>
-                <p id="JSONtitle" class="JSON-content">
-                    Click <span>Generate!</span> to obtain a title
-                </p>
-            </div>
+    <script src="./node_modules/axios/dist/axios.min.js"></script>
 
-            <div class="output-container" id="desc-container">
-                <p class="p-label">
-                    Description
-                </p>
-                <p id="JSONdesc" class="JSON-content">
-                    Click <span>Generate!</span> to obtain a description
-                </p>
+    <header>
+        <p class="header-text">JSONplaceholder Testing</p>
+    </header>
+
+    <main>
+        <div class="button-container">
+            <div class="button-back">
+                <button type="submit" class="get-button" onmousedown="printUserdata()">GET Users</button>
             </div>
         </div>
+
+        <div class="text-container">
+            <p class="get-text"></p>
+        </div>
+
     </main>
+
     <script src="app.js"></script>
 </body>
 

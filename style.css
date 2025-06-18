@@ -3,113 +3,89 @@
     margin: 0;
 }
 
+html{
+    height: 100%;
+}
+
 body{
-    background: rgb(40, 41, 75);
+background: #833AB4;
+background: linear-gradient(45deg,rgba(131, 58, 180, 1) 0%, rgba(253, 29, 29, 1) 50%, rgba(252, 176, 69, 1) 100%);
 }
 
-header{
+.header-text{
     display: flex;
     justify-content: center;
-    margin-top: 20px;
-}
-
-.header-container{
-    background: rgba(135, 138, 209, 0.5);
-    padding: 20px;
-    border-radius: 10px;
+    font-family:'Segoe UI';
+    font-size: xx-large;
+    font-weight: bolder;
     color: white;
-    font-family: Helvetica;
-    font-weight: bold;
-}
-
-main{
-    display: flex;
-    justify-content: center;
-}
-
-.app-container{
-    background: rgba(135, 138, 209, 0.5);
-    width: 75vh;
-    padding: 30px;
-    border-radius: 10px;
-    margin: 20px;
-    min-height: max-content;
+    background: rgb(0,0,0, 0.3);
+    padding: 1%;
 }
 
 .button-container{
     display: flex;
     justify-content: center;
-}
+    align-items: center;
+    padding-top: 5%;}
 
-.JSONbutton{
-    height: 30px;
-    width: 25%;
-    font-weight: bold;
-    border-style: none;
+.button-back{
+    display: flex;
+    justify-content: center;
+    border-style: solid;
+    border-color: transparent;
+    background: white;
     border-radius: 10px;
-    background: rgba(190, 192, 255, 0.5);
-    color: rgb(40, 41, 75);
     transition: 0.3s;
 }
 
-.JSONbutton:hover{
-    background: rgb(40, 41, 75);
-    color: rgb(190, 192, 255);
-}
+.button-back:hover{
+    border-style: solid;
+    border-color: white;
+    background: transparent;
 
-.output-container{
-    display: grid;
-    margin-top: 20px;
-    height: 33%;
-    padding: 20px;
-    background: rgba(190, 192, 255, 0.5);
-    border-radius: 10px;
-    grid-template-rows: repeat(4, 1fr);
-    &:is(#title-container){
-        height: 55px;
+    & .get-button{
+        color: white;
     }
 }
 
-
-.p-label{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-top-style: solid;
-    border-color: rgb(40, 41, 75);
-    border-radius: 10px;
-    grid-row: 1/2;
-}
-
-.JSON-content{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-bottom-style: solid;
-    border-color: rgb(40, 41, 75);
-    border-radius: 10px;
-    grid-row: 2/5;
-    
-    &:is(#JSONtitle){
-        height: 35px;
-    }
-}
-
-#JSONdesc{
-    padding: 12px;
-}
-
-span{
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    margin-left: 5px;
-    margin-right: 5px;
+.get-button{
+    width: 200px;
+    padding: 15%;
+    font-size: xx-large;
     border-style: none;
-    height: fit-content;
-    background: rgb(40, 41, 75);
     border-radius: 10px;
-    width: 90px;
-    height: 30px;
+    background-image: linear-gradient(45deg,rgba(131, 58, 180, 1) 0%, rgba(253, 29, 29, 1) 50%, rgba(252, 176, 69, 1) 100%);
+    background-clip: text;
+    color: transparent;
+    transition: 0.3s;
+    text-align: center;
+    font-family:'Segoe UI';
+    font-size: xx-large;
+    font-weight: 700;
+}
+
+.text-container{
+    display: flex;
+    justify-content: center;
+    padding-top: 5%;
+    height: 200px;
+}
+
+
+.get-text{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background: black;
+    width: 66%;
+    border-style: solid;
+    border-radius: 10px;
+    border-width: 2px;
+    border-color: white;
+    text-align: center;
+    background: rgb(0,0,0, 0.5);
+    font-size: large;
+    font-family:'Segoe UI';
 }

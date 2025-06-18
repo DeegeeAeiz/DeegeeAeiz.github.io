@@ -1,20 +1,28 @@
-async function GeneratePlaceholder() {
-  post = Math.floor(Math.random() * 101);
-  const request = await fetch(
-    `https://jsonplaceholder.typicode.com/posts/${post}`
-  );
-  const response = await request.json();
-  let placeholderTitle = response.title;
-  let placeholderDesc = response.body;
-  UpdateUI(placeholderTitle, placeholderDesc);
-}
+async function printUserdata() {
+  let users = [];
+  try {
+    const response = await axios.get(
+      "https://jsonplaceholder.typicode.com/users"
+    );
 
-function UpdateUI(title, desc) {
-  title = title.charAt(0).toUpperCase() + title.slice(1);
-  desc = desc.charAt(0).toUpperCase() + desc.slice(1) + ".";
-  const titleText = document.querySelector("#JSONtitle");
-  const descText = document.querySelector("#JSONdesc");
+    // console.log(response);
 
-  titleText.innerText = title;
-  descText.innerText = desc;
+    // console.log(response.data);
+
+    // console.log(response.data[0]);
+
+    // console.log(response.data[0].name);
+
+    for (i = 0; i < response.data.length; i++) {
+      let user = response.data[i].name;
+      users.push(user);
+    }
+    // console.log(users);
+
+    text = document.querySelector(".get-text");
+
+    text.innerText = users;
+  } catch (error) {
+    console.log(error);
+  }
 }
