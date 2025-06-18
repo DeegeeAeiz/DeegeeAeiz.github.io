@@ -1,23 +1,18 @@
 async function printUserdata() {
   let users = [];
   try {
-    const response = await axios.get(
-      "https://jsonplaceholder.typicode.com/users"
-    );
+    const request = await fetch("https://jsonplaceholder.typicode.com/users");
+
+    const response = await request.json();
 
     // console.log(response);
 
-    // console.log(response.data);
+    // console.log(response[0].name);
 
-    // console.log(response.data[0]);
-
-    // console.log(response.data[0].name);
-
-    for (i = 0; i < response.data.length; i++) {
-      let user = response.data[i].name;
+    for (i = 0; i < response.length; i++) {
+      let user = response[i].name;
       users.push(user);
     }
-    // console.log(users);
 
     text = document.querySelector(".get-text");
 
