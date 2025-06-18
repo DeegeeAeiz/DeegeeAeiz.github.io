@@ -5,7 +5,7 @@ async function printUserdata() {
 
     const response = await request.json();
 
-    console.log(response);
+    // console.log(response);
 
     // console.log(response[0].name);
 
