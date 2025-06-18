@@ -57,7 +57,7 @@ function mouseMoveHandler(e) {
 function drawBall() {
   ctx.beginPath();
   ctx.arc(x, y, ballRadius, 0, Math.PI * 2);
-  ctx.fillStyle = "green";
+  ctx.fillStyle = "rgb(254, 139, 63)";
   ctx.fill();
   ctx.closePath();
 }
@@ -65,7 +65,7 @@ function drawBall() {
 function drawPaddle() {
   ctx.beginPath();
   ctx.rect(paddleX, canvas.height - paddleHeight, paddleWidth, paddleHeight);
-  ctx.fillStyle = "green";
+  ctx.fillStyle = "rgb(63, 63, 254)";
   ctx.fill();
   ctx.closePath();
 }
@@ -80,7 +80,7 @@ function drawBricks() {
         bricks[c][r].y = brickY;
         ctx.beginPath();
         ctx.rect(brickX, brickY, brickWidth, brickHeight);
-        ctx.fillStyle = "green";
+        ctx.fillStyle = "rgb(73, 254, 63)";
         ctx.fill();
         ctx.closePath();
       }
@@ -114,9 +114,9 @@ function collisionDetection() {
 }
 
 function drawScore() {
-  ctx.font = "16px arial";
-  ctx.fillStyle = "red";
-  ctx.fillText(`Score: ${score}`, 8, 20);
+  ctx.font = "25px arial bolder";
+  ctx.fillStyle = "rgb(254, 143, 63) ";
+  ctx.fillText(`Score: ${score}`, 197, 22);
 }
 
 function draw() {
